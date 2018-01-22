@@ -1,1 +1,400 @@
-Hello World
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta character set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SMACK Software Verifier and Verification Toolchain</title>
+		<!-- Meta Description -->
+        <meta name="description" content="Blue One Page Creative HTML5 Template">
+        <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
+        <meta name="author" content="Jonathan Whitaker">
+		
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- CSS
+		================================================== -->
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+
+		<!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+
+    </head>
+	
+    <body id="body">
+
+		<!-- preloader -->
+		<div id="preloader">
+            <div class="loder-box">
+            	<div class="battery"></div>
+            </div>
+		</div>
+		<!-- end preloader -->
+
+        <!--
+        Fixed Navigation
+        ==================================== -->
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+                    </button>
+					<!-- /responsive nav button -->
+					
+					<!-- logo -->
+					<h1 class="navbar-brand">
+						<a href="#body" style="color: #fff">SMACK</a>
+					</h1>
+					<!-- /logo -->
+                </div>
+
+				<!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li><a href="#body">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#people">People</a></li>
+                        <li><a target="_blank" href="https://github.com/smackers/smack" class="external">GitHub</a></li>
+                    </ul>
+                </nav>
+				<!-- /main nav -->
+				
+            </div>
+        </header>
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+		
+		<main class="site-content" role="main">
+		
+        <!--
+        Home Slider
+        ==================================== -->
+		
+		<section id="home-slider">
+            <div class="slide-caption">
+                <div class="caption-content">
+                    <img src="img/smack_logo.png" alt="SMACK">
+                    <span class="animated fadeInDown">Software Verifier &amp; Verification Toolchain</span>
+                    <a target="_blank" href="https://github.com/smackers/smack" class="btn btn-color btn-effect">GitHub</a>
+                </div>
+            </div>
+		</section>
+			
+			
+		<!-- Service section -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="sec-title text-center">
+						<h2 class="wow animated bounceInLeft">About</h2>
+					</div>
+                    
+                    <div>
+                        <p>
+SMACK is both a modular software verification toolchain and a
+self-contained software verifier. It can be used to verify the assertions
+in its input programs. In its default mode, assertions are verified up to a
+given bound on loop iterations and recursion depth; it contains experimental
+support for unbounded verification as well.
+Under the hood, SMACK is a translator from the LLVM
+compiler's popular intermediate representation (IR) into the
+Boogie intermediate verification language (IVL).
+Sourcing LLVM IR exploits an increasing number of compiler front-ends,
+optimizations, and analyses.
+Targeting Boogie exploits a canonical
+platform which simplifies the implementation of algorithms for verification,
+model checking, and abstract interpretation.
+                        </p>
+                    </div>
+					
+					
+				</div>
+			</div>
+		</section>
+		<!-- end Service section -->
+		
+        <!-- Publications section -->
+        <section id="publications">
+            <div class="container">
+                <div class="row">
+                    <div class="sec-title text-center">
+						<h2 class="wow animated bounceInLeft">Publications</h2>
+					</div>
+                    
+                    <div class="">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_3">Formal Verification of Optimizing Compilers</a>, Yiji Zhang, Lenore D. Zuck, Keynote at the 14th International Conference on Distributed Computing and Internet Technology (ICDCIT 2018)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2017/09/aplas2017-hr/">Counterexample-Guided Bit-Precision Selection</a>, Shaobo He, Zvonimir Rakamaric, 15th Asian Symposium on Programming Languages and Systems (APLAS 2017)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2017/09/tapas2017-hllr/">Static Assertion Checking of Production Software with Angelic Verification</a>, Shaobo He, Shuvendu Lahiri, Akash Lal, Zvonimir Rakamaric, 8th Workshop on Tools for Automatic Program Analysis (TAPAS 2017)</li>
+                            <li class="list-group-item"><a href="https://www.microsoft.com/en-us/research/publication/refining-interprocedural-change-impact-analysis-using-equivalence-relations">Refining Interprocedural Change-Impact Analysis using Equivalence Relations</a>, Alex Gyori, Shuvendu Lahiri, Nimrod Partush, 26th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2017)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2017/06/hotos2017-bbbprr/">System Programming in Rust: Beyond Safety</a>, Abhiram Balasubramanian, Marek S. Baranowski, Anton Burtsev, Aurojit Panda, Zvonimir Rakamaric, Leonid Ryzhyk, 16th Workshop on Hot Topics in Operating Systems (HotOS 2017)</li>
+                            <li class="list-group-item"><a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/almeida">Verifying Constant-Time Implementations</a>, Jose Bacelar Almeida, Manuel Barbosa, Gilles Barthe, Francois Dupressoir, Michael Emmi, 25th USENIX Security Symposium (2016)</li>
+                            <li class="list-group-item"><a href="http://dl.acm.org/citation.cfm?id=2908126">Statistical Similarity of Binaries</a>, Yaniv David, Nimrod Partush, Eran Yahav, 37th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2016)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2016/02/icse2016-chwre/">SMACK Software Verification Toolchain</a>, Montgomery Carter, Shaobo He, Jonathan Whitaker, Zvonimir Rakamaric, Michael Emmi, Demonstrations Track at the 38th IEEE/ACM International Conference on Software Engineering (ICSE 2016)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2015/08/ase2015-ddr/">Fast and Precise Symbolic Analysis of Concurrency Bugs in Device Drivers</a>, Pantazis Deligiannis, Alastair F. Donaldson, Zvonimir Rakamaric, 30th IEEE/ACM International Conference on Automated Software Engineering (ASE 2015)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2015/01/smackcorral-a-modular-verifier-competition-contribution/">SMACK+Corral: A Modular Verifier (Competition Contribution)</a>, Arvind Haran, Montgomery Carter, Michael Emmi, Akash Lal, Shaz Qadeer, Zvonimir Rakamaric, 21st International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2015)</li>
+                            <li class="list-group-item"><a href="http://madhu.cs.illinois.edu/CAV14ice.pdf">ICE: A Robust Framework for Learning Invariants</a>, Pranav Garg, Christof Löding, P. Madhusudan, Daniel Neider, 26th International Conference on Computer Aided Verification (CAV 2014)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2014/05/smack-decoupling-source-language-details-from-verifier-implementations/">SMACK: Decoupling Source Language Details from Verifier Implementations</a>, Zvonimir Rakamaric, Michael Emmi, 26th International Conference on Computer Aided Verification (CAV 2014) <b>[MAIN REFERENCE]</b></li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2011/03/modular-verification-of-shared-memory-concurrent-system-software/">Modular Verification of Shared-Memory Concurrent System Software</a>, Zvonimir Rakamaric, Ph.D. Thesis, Department of Computer Science, University of British Columbia, 2011</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2009/01/a-scalable-memory-model-for-low-level-code/">A Scalable Memory Model for Low-Level Code</a>, Zvonimir Rakamaric, Alan J. Hu, 10th International Conference on Verification, Model Checking and Abstract Interpretation (VMCAI 2009)</li>
+                            <li class="list-group-item"><a href="http://soarlab.org/2008/09/automatic-inference-of-frame-axioms-using-static-analysis/">Automatic Inference of Frame Axioms Using Static Analysis</a>, Zvonimir Rakamaric, Alan J. Hu, 23rd IEEE/ACM International Conference on Automated Software Engineering (ASE 2008)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Publications section -->
+            
+		<!-- portfolio section -->
+		<!--<section id="portfolio">
+			<div class="container">
+				<div class="row">
+				
+					<div class="sec-title text-center wow animated fadeInDown">
+						<h2>FEATURES</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					
+
+					<ul class="project-wrapper wow animated fadeInUp">
+						<li class="portfolio-item">
+							<img src="img/portfolio/item.jpg" class="img-responsive" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="img/portfolio/item.jpg"><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+						
+						<li class="portfolio-item">
+							<img src="img/portfolio/item2.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Wall street" href="img/slider/banner.jpg" data-fancybox-group="works" ><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+						
+						<li class="portfolio-item">
+							<img src="img/portfolio/item3.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="img/portfolio/item3.jpg"><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+						
+						<li class="portfolio-item">
+							<img src="img/portfolio/item4.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="img/portfolio/item4.jpg"><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+						
+						<li class="portfolio-item">
+							<img src="img/portfolio/item5.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="img/portfolio/item5.jpg"><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+						
+						<li class="portfolio-item">
+							<img src="img/portfolio/item6.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+							<figcaption class="mask">
+								<h3>Wall street</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
+							</figcaption>
+							<ul class="external">
+								<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="img/portfolio/item6.jpg"><i class="fa fa-search"></i></a></li>
+								<li><a href=""><i class="fa fa-link"></i></a></li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</section>-->
+		<!-- end portfolio section -->
+		
+		<!-- Persons section -->
+		<section id="people">
+			<div class="">
+				<div class="container">
+                
+                    <div class="row">     
+                        <div class="sec-title text-center">
+                            <h2 class="">People</h2>
+						</div>
+                        
+                        <div class="sec-subtitle text-center">
+                            <h2 class="">Coordinators</h2>
+                        </div>
+                        
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <div class="people-item text-center">
+                                    <a href="http://michael-emmi.github.io/"><img src="img/people/emmi.jpg" alt="Michael Emmi"></a>
+                                    <div>
+                                       <span>Michael Emmi</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="col-md-6">
+                                 <div class="people-item text-center">
+                                    <a href="http://www.zvonimir.info/"><img src="img/people/zvonimir.jpg" alt="Zvonimir Rakamaric"></a>
+                                    <div>
+                                       <span>Zvonimir Rakamaric</span>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sec-subtitle text-center">
+                            <h2 class="">Contributors</h2>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="http://www.linkedin.com/pub/montgomery-carter/12/a89/512"><img src="img/people/carter.jpg" alt="Montgomery Carter"></a>
+                                    <div class="clearfix">
+                                       <span>Montgomery Carter</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="http://pdeligia.github.io/"><img src="img/people/deligiannis.jpg" alt="Pantazis Deligiannis"></a>
+                                    <div class="clearfix">
+                                       <span>Pantazis Deligiannis</span>
+                                    </div>
+                                 </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="http://www.cs.utah.edu/~haran"><img src="img/people/haran.jpg" alt="Arvind Haran"></a>
+                                    <div class="clearfix">
+                                       <span>Arvind Haran</span>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="http://www.cs.utah.edu/~shaobo/"><img src="img/people/shaobo.jpg" alt="Shaobo He"></a>
+                                    <div class="clearfix">
+                                       <span>Shaobo He</span>
+                                    </div>
+                                 </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="http://jiten-thakkar.com/"><img src="img/people/thakkar.jpg" alt="Jiten Thakkar"></a>
+                                    <div class="clearfix">
+                                       <span>Jiten Thakkar</span>
+                                    </div>
+                                 </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="people-item text-center">
+                                    <a href="https://www.linkedin.com/in/jonathan-whitaker-5a8b2484"><img src="img/people/whitaker.jpg" alt="Jonathan Whitaker"></a>
+                                <div class="clearfix">
+                                   <span>Jonathan Whitaker</span>
+                                </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</section>
+		<!-- end Persons section -->
+
+		</main>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="row text-center">
+					<div class="footer-content">
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- jquery easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- Fullscreen slider -->
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+		<!-- onscroll animation -->
+        <script src="js/wow.min.js"></script>
+		<!-- Custom Functions -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
