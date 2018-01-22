@@ -1,0 +1,2 @@
+./smack.sh -w error-witness.graphml --clang-options=-m32 --svcomp-property ../../sv-benchmarks/c/ReachSafety.prp benchmarks/multidimensional/max-2-n-u.c
+--------------------------------------------------------------------------------

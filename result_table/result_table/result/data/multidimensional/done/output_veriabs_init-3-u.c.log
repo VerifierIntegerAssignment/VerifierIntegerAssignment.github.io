@@ -1,0 +1,181 @@
+scripts/veriabs --property-file ../../sv-benchmarks/c/ReachSafety.prp benchmarks/multidimensional/init-3-u.c
+
+
+--------------------------------------------------------------------------------
+
+
+VeriAbs version 1.3.10
+VeriAbs root: /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/bin-2018/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on ../../sv-benchmarks/c/array-examples/init-3-u.c
+Home: /home/benchexec
+cp: cannot stat '../../sv-benchmarks/c/array-examples/*.h': No such file or directory
+VeriAbs input C file(rw): /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground.c
+VeriAbs command: /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/bin-2018/veriabs/scripts/veriabs.pl --svcomp17 --property-file /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/sv-benchmarks/c/ReachSafety.prp /home/benchexec/ar_abs_temp /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground.prj
+Working directory on running VeriAbs.pl : /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/bin-2018/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/bin-2018/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /tmp/vcloud-vcloud-master/worker/working_dir_a7675dbd-30d0-49ec-a08c-0a8876f25d8d/bin-2018/veriabs/scripts/vrf standard_allDiff2_false_unreach_call_ground
+ARP:PROGRAM OUT OF SCOPE
+/home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of standard_allDiff2_false_unreach_call_ground
+
+NOT Amenable to Array Abstraction
+OUTCOME standard_allDiff2_false_unreach_call_ground -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 2
+witness_generation:  total time taken(ms): 39
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 2
+witness_generation:  total time taken(ms): 40
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/assertFlags.c /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/kind.c /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/standard_allDiff2_false_unreach_call_ground.c > /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/test.c
+TIMEOUT:CBMC KILLED : 31744 && timeout val 120 s.
+
+*******
+
+--1--
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 2
+witness_generation:  total time taken(ms): 40
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/assertFlags.c /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/kind.c /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/standard_allDiff2_false_unreach_call_ground.c > /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/test.c
+
+Running cbmc on unparsed file with induction: /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground/LAU/test.c
+Running verification check by cbmc: /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground.c
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Running with known bound: 100001 /home/benchexec/ar_abs_temp/standard_allDiff2_false_unreach_call_ground.c
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+Not summarizable!
+Not running on summarizer generated file.
+
+Running for lauf: 
+
+Lauf unwind count : 22
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 54
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 118
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 246
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 502
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 1014
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+Lauf unwind count : 2038
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+Lauf unwind count : 4086
+
+Running with --z3 - 

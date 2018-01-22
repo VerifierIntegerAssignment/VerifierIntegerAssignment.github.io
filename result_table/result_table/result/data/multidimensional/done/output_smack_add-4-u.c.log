@@ -1,0 +1,2 @@
+add-4-n-u.c./smack.sh -w error-witness.graphml --clang-options=-m32 --svcomp-property ../../sv-benchmarks/c/ReachSafety.prp benchmarks/multidimensional/add-4-u.c
+--------------------------------------------------------------------------------
