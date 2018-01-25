@@ -80,9 +80,10 @@
                     <ul id="nav" class="nav navbar-nav">
                         <li><a href="#body">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#award">Awards &amp; Achievements</a></li>
                         <li><a href="#publications">Publications</a></li>
                         <li><a href="#people">People</a></li>
-                        <li><a target="_blank" href="https://github.com/smackers/smack" class="external">GitHub</a></li>
+                        <li><a target="_blank" href="https://github.com/VerifierIntegerAssignment/VIAP_ARRAY" class="external">GitHub</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -120,20 +121,9 @@
                     
                     <div>
                         <p>
-SMACK is both a modular software verification toolchain and a
-self-contained software verifier. It can be used to verify the assertions
-in its input programs. In its default mode, assertions are verified up to a
-given bound on loop iterations and recursion depth; it contains experimental
-support for unbounded verification as well.
-Under the hood, SMACK is a translator from the LLVM
-compiler's popular intermediate representation (IR) into the
-Boogie intermediate verification language (IVL).
-Sourcing LLVM IR exploits an increasing number of compiler front-ends,
-optimizations, and analyses.
-Targeting Boogie exploits a canonical
-platform which simplifies the implementation of algorithms for verification,
-model checking, and abstract interpretation.
+Verifier Integer Assignment Program(VIAP) translates a program to first-order logic with quantifiers on natural numbers following the method proposed recently by <a href="http://www.cs.ust.hk/%7Eflin/">Professor Fangzhen Lin</a> . Once translated to a first-order theory, properties of the program can then be proved using induction (because of the quantifiers on natural numbers) and other methods.
                         </p>
+                        
                     </div>
 					
 					
@@ -141,7 +131,30 @@ model checking, and abstract interpretation.
 			</div>
 		</section>
 		<!-- end Service section -->
-		
+      
+      
+        <!-- Publications section -->
+        <section id="award">
+            <div class="container">
+                <div class="row">
+                    <div class="sec-title text-center">
+						<h2 class="wow animated bounceInLeft">Awards &amp; Achievements</h2>
+					</div>
+                    
+                    <div class="">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://sv-comp.sosy-lab.org/2018/results/results-verified/">VIAP was second in the ReachSafety-Arrays sub-category of ReachSafety category</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
         <!-- Publications section -->
         <section id="publications">
             <div class="container">
@@ -152,21 +165,9 @@ model checking, and abstract interpretation.
                     
                     <div class="">
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_3">Formal Verification of Optimizing Compilers</a>, Yiji Zhang, Lenore D. Zuck, Keynote at the 14th International Conference on Distributed Computing and Internet Technology (ICDCIT 2018)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2017/09/aplas2017-hr/">Counterexample-Guided Bit-Precision Selection</a>, Shaobo He, Zvonimir Rakamaric, 15th Asian Symposium on Programming Languages and Systems (APLAS 2017)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2017/09/tapas2017-hllr/">Static Assertion Checking of Production Software with Angelic Verification</a>, Shaobo He, Shuvendu Lahiri, Akash Lal, Zvonimir Rakamaric, 8th Workshop on Tools for Automatic Program Analysis (TAPAS 2017)</li>
-                            <li class="list-group-item"><a href="https://www.microsoft.com/en-us/research/publication/refining-interprocedural-change-impact-analysis-using-equivalence-relations">Refining Interprocedural Change-Impact Analysis using Equivalence Relations</a>, Alex Gyori, Shuvendu Lahiri, Nimrod Partush, 26th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2017)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2017/06/hotos2017-bbbprr/">System Programming in Rust: Beyond Safety</a>, Abhiram Balasubramanian, Marek S. Baranowski, Anton Burtsev, Aurojit Panda, Zvonimir Rakamaric, Leonid Ryzhyk, 16th Workshop on Hot Topics in Operating Systems (HotOS 2017)</li>
-                            <li class="list-group-item"><a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/almeida">Verifying Constant-Time Implementations</a>, Jose Bacelar Almeida, Manuel Barbosa, Gilles Barthe, Francois Dupressoir, Michael Emmi, 25th USENIX Security Symposium (2016)</li>
-                            <li class="list-group-item"><a href="http://dl.acm.org/citation.cfm?id=2908126">Statistical Similarity of Binaries</a>, Yaniv David, Nimrod Partush, Eran Yahav, 37th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2016)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2016/02/icse2016-chwre/">SMACK Software Verification Toolchain</a>, Montgomery Carter, Shaobo He, Jonathan Whitaker, Zvonimir Rakamaric, Michael Emmi, Demonstrations Track at the 38th IEEE/ACM International Conference on Software Engineering (ICSE 2016)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2015/08/ase2015-ddr/">Fast and Precise Symbolic Analysis of Concurrency Bugs in Device Drivers</a>, Pantazis Deligiannis, Alastair F. Donaldson, Zvonimir Rakamaric, 30th IEEE/ACM International Conference on Automated Software Engineering (ASE 2015)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2015/01/smackcorral-a-modular-verifier-competition-contribution/">SMACK+Corral: A Modular Verifier (Competition Contribution)</a>, Arvind Haran, Montgomery Carter, Michael Emmi, Akash Lal, Shaz Qadeer, Zvonimir Rakamaric, 21st International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2015)</li>
-                            <li class="list-group-item"><a href="http://madhu.cs.illinois.edu/CAV14ice.pdf">ICE: A Robust Framework for Learning Invariants</a>, Pranav Garg, Christof Löding, P. Madhusudan, Daniel Neider, 26th International Conference on Computer Aided Verification (CAV 2014)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2014/05/smack-decoupling-source-language-details-from-verifier-implementations/">SMACK: Decoupling Source Language Details from Verifier Implementations</a>, Zvonimir Rakamaric, Michael Emmi, 26th International Conference on Computer Aided Verification (CAV 2014) <b>[MAIN REFERENCE]</b></li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2011/03/modular-verification-of-shared-memory-concurrent-system-software/">Modular Verification of Shared-Memory Concurrent System Software</a>, Zvonimir Rakamaric, Ph.D. Thesis, Department of Computer Science, University of British Columbia, 2011</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2009/01/a-scalable-memory-model-for-low-level-code/">A Scalable Memory Model for Low-Level Code</a>, Zvonimir Rakamaric, Alan J. Hu, 10th International Conference on Verification, Model Checking and Abstract Interpretation (VMCAI 2009)</li>
-                            <li class="list-group-item"><a href="http://soarlab.org/2008/09/automatic-inference-of-frame-axioms-using-static-analysis/">Automatic Inference of Frame Axioms Using Static Analysis</a>, Zvonimir Rakamaric, Alan J. Hu, 23rd IEEE/ACM International Conference on Automated Software Engineering (ASE 2008)</li>
+                            <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/pii/S000437021630011X?via%3Dihub">A Formalization of Programs in First-Order Logic with a Discrete Linear Order</a>,Fangzhen Lin,Artificial Intelligence(2016)</li>
+                            <li class="list-group-item"><a href="https://github.com/VerifierIntegerAssignment/sv-comp/blob/master/viap-automated-system.pdf">VIAP - automated system for verifying integer assignment programs with loops</a>,Pritom Rajkhowa, Fangzhen Lin, 19th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing,SYNASC 2017, Timisoara, Romania, September 21-24, 2017</li>
+                            <li class="list-group-item"><a href="https://github.com/VerifierIntegerAssignment/sv-comp-1/blob/master/viap-automated-system.pdf">VIAP-Automated System for Verifying Integer Assignment Programs with Loops(Competition Contribution)</a>, Pritom Rajkhowa, Fangzhen Lin, 7th International Competition on Software Verification (2018)(not part of TACAS proceeding)</li>
                         </ul>
                     </div>
                 </div>
@@ -273,23 +274,24 @@ model checking, and abstract interpretation.
                         <div class="sec-title text-center">
                             <h2 class="">People</h2>
 						</div>
-                        
+                        <!--
                         <div class="sec-subtitle text-center">
                             <h2 class="">Coordinators</h2>
                         </div>
+                        -->
                         
                         <div class="row text-center">
                             <div class="col-md-6">
                                 <div class="people-item text-center">
-                                    <a href="http://michael-emmi.github.io/"><img src="img/people/emmi.jpg" alt="Michael Emmi"></a>
+                                    <a href="http://www.cs.ust.hk/%7Eflin/"><img src="img/people/flin.jpg" alt="Professor Fangzhen Lin"></a>
                                     <div>
-                                       <span>Michael Emmi</span>
+                                       <span>Professor Fangzhen Lin</span>
                                     </div>
                                  </div>
                             </div>
                             <div class="col-md-6">
                                  <div class="people-item text-center">
-                                    <a href="http://www.zvonimir.info/"><img src="img/people/zvonimir.jpg" alt="Zvonimir Rakamaric"></a>
+                                    <a href="http://www.zvonimir.info/"><img src="img/people/pritom.jpg" alt="Pritom Rajkhowa"></a>
                                     <div>
                                        <span>Pritom Rajkhowa</span>
                                     </div>
