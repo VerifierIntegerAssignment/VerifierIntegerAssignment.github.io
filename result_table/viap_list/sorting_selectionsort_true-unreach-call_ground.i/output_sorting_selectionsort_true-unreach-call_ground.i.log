@@ -1,0 +1,212 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE[100000][100000][100000];
+  int _2_PROVE[100000][100000];
+  int _3_PROVE[100000][100000];
+  int a[100000];
+  int i;
+  i = 0;
+  int x;
+  int y;
+  while (i < 100000)
+  {
+    int k;
+    k = i + 1;
+    int s;
+    s = i;
+    while (k < 100000)
+    {
+      if (a[k] < a[s])
+      {
+        s = k;
+      }
+
+      k = k + 1;
+    }
+
+    if (s != i)
+    {
+      int tmp;
+      tmp = a[s];
+      a[s] = a[i];
+      a[i] = tmp;
+    }
+
+    x = 0;
+    while (x < i)
+    {
+      y = x + 1;
+      while (y < i)
+      {
+        _1_PROVE[i][x][y] = a[x] <= a[y];
+        y = y + 1;
+      }
+
+      x = x + 1;
+    }
+
+    x = i;
+    while (x < 100000)
+    {
+      _2_PROVE[x] = a[x] >= a[i];
+      x = x + 1;
+    }
+
+    i = i + 1;
+  }
+
+  x = 0;
+  while (x < 100000)
+  {
+    y = x + 1;
+    while (y < 100000)
+    {
+      _3_PROVE[y][x] = a[x] <= a[y];
+      y = y + 1;
+    }
+
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array tmp:int i:int k:int _1_PROVE:array _3_PROVE:array RET:int s:int y:int x:int _2_PROVE:array}
+
+
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+
+2. Output equations:
+tmp1 = tmp22(_N5)
+i1 = (_N5+0)
+k1 = k22(_N5)
+d1array1(_x1,_x2) = d1array22(_x1,_x2,_N5)
+d2array1(_x1,_x2,_x3) = d2array27(_x1,_x2,_x3,_N7)
+s1 = s22(_N5)
+main = 0
+y1 = y27(_N7)
+x1 = (_N7+0)
+d3array1(_x1,_x2,_x3,_x4) = d3array22(_x1,_x2,_x3,_x4,_N5)
+
+3. Other axioms:
+s3((_n1+1),_n5) = ite((d1array22(a,(_n1+((_n5+0)+1)),_n5)<d1array22(a,s3(_n1,_n5),_n5)),(_n1+((_n5+0)+1)),s3(_n1,_n5))
+s3(0,_n5) = (_n5+0)
+(_N1(_n5)>=(-(((_n5+0)+1))+100000))
+(_n1<_N1(_n5)) -> ((_n1+((_n5+0)+1))<100000)
+d3array8(_x1,_x2,_x3,_x4,(_n2+1),_n3,_n5) = d3array8(_x1,_x2,_x3,_x4,_n2,_n3,_n5)
+d3array8(_x1,_x2,_x3,_x4,0,_n3,_n5) = d3array11(_x1,_x2,_x3,_x4,_n3,_n5)
+(_N2(_n3,_n5)>=((_n5+0)-((_n3+0)+1)))
+(_n2<_N2(_n3,_n5)) -> ((_n2+((_n3+0)+1))<(_n5+0))
+y11((_n3+1),_n5) = (_N2(_n3,_n5)+((_n3+0)+1))
+d3array11(_x1,_x2,_x3,_x4,(_n3+1),_n5) = d3array8(_x1,_x2,_x3,_x4,_N2(_n3,_n5),_n3,_n5)
+y11(0,_n5) = y22(_n5)
+d3array11(_x1,_x2,_x3,_x4,0,_n5) = d3array22(_x1,_x2,_x3,_x4,_n5)
+(_N3(_n5)>=((_n5+0)-0))
+(_n3<_N3(_n5)) -> ((_n3+0)<(_n5+0))
+d1array13(_x1,_x2,(_n4+1),_n5) = d1array13(_x1,_x2,_n4,_n5)
+d1array13(_x1,_x2,0,_n5) = ite((s3(_N1(_n5),_n5)!=(_n5+0)),ite(((_x1=a) and (_x2=(_n5+0))),d1array22(a,s3(_N1(_n5),_n5),_n5),ite(((_x1=a) and (_x2=s3(_N1(_n5),_n5))),d1array22(a,(_n5+0),_n5),d1array22(_x1,_x2,_n5))),d1array22(_x1,_x2,_n5))
+(_N4(_n5)>=(-((_n5+0))+100000))
+(_n4<_N4(_n5)) -> ((_n4+(_n5+0))<100000)
+tmp22((_n5+1)) = ite((s3(_N1(_n5),_n5)!=(_n5+0)),d1array22(a,s3(_N1(_n5),_n5),_n5),tmp22(_n5))
+k22((_n5+1)) = (_N1(_n5)+((_n5+0)+1))
+d1array22(_x1,_x2,(_n5+1)) = d1array13(_x1,_x2,_N4(_n5),_n5)
+s22((_n5+1)) = s3(_N1(_n5),_n5)
+y22((_n5+1)) = y11(_N3(_n5),_n5)
+x22((_n5+1)) = (_N4(_n5)+(_n5+0))
+d3array22(_x1,_x2,_x3,_x4,(_n5+1)) = d3array11(_x1,_x2,_x3,_x4,_N3(_n5),_n5)
+tmp22(0) = tmp
+k22(0) = k
+d1array22(_x1,_x2,0) = d1array(_x1,_x2)
+s22(0) = s
+y22(0) = y
+x22(0) = x
+d3array22(_x1,_x2,_x3,_x4,0) = d3array(_x1,_x2,_x3,_x4)
+(_N5>=(-(0)+100000))
+(_n5<_N5) -> ((_n5+0)<100000)
+d2array24(_x1,_x2,_x3,(_n6+1),_n7) = d2array24(_x1,_x2,_x3,_n6,_n7)
+d2array24(_x1,_x2,_x3,0,_n7) = d2array27(_x1,_x2,_x3,_n7)
+(_N6(_n7)>=(-(((_n7+0)+1))+100000))
+(_n6<_N6(_n7)) -> ((_n6+((_n7+0)+1))<100000)
+y27((_n7+1)) = (_N6(_n7)+((_n7+0)+1))
+d2array27(_x1,_x2,_x3,(_n7+1)) = d2array24(_x1,_x2,_x3,_N6(_n7),_n7)
+y27(0) = y22(_N5)
+d2array27(_x1,_x2,_x3,0) = d2array(_x1,_x2,_x3)
+(_N7>=(-(0)+100000))
+(_n7<_N7) -> ((_n7+0)<100000)
+
+4. Assumption :
+
+5. Assertion :
+(ite((s3(_N1(_n5),_n5)!=(_n5+0)),ite(((_n3+0)=(_n5+0)),d1array22(a,s3(_N1(_n5),_n5),_n5),ite(((_n3+0)=s3(_N1(_n5),_n5)),d1array22(a,(_n5+0),_n5),d1array22(a,(_n3+0),_n5))),d1array22(a,(_n3+0),_n5))<=ite((s3(_N1(_n5),_n5)!=(_n5+0)),ite(((_n2+((_n3+0)+1))=(_n5+0)),d1array22(a,s3(_N1(_n5),_n5),_n5),ite(((_n2+((_n3+0)+1))=s3(_N1(_n5),_n5)),d1array22(a,(_n5+0),_n5),d1array22(a,(_n2+((_n3+0)+1)),_n5))),d1array22(a,(_n2+((_n3+0)+1)),_n5)))
+(d3array22(a,(_n4+(_n5+0)),_n4,_n5,_N5)>=d3/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c: In function ‘main’:
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:111:28: error: ‘tmp’ undeclared (first use in this function)
+         printf("tmp:%d\n", tmp);
+                            ^
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:111:28: note: each undeclared identifier is reported only once for each function it appears in
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:127:19: error: assignment to expression with array type
+       _2_PROVE[x] = a[x] >= a[i];
+                   ^
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:128:14: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+       printf("_2_PROVE[x]:%d\n", _2_PROVE[x]);
+              ^
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:154:24: error: ‘k’ undeclared (first use in this function)
+       printf("k:%d\n", k);
+                        ^
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:155:24: error: ‘s’ undeclared (first use in this function)
+       printf("s:%d\n", s);
+                        ^
+array22(a,(_n5+0),_n4,_n5,_N5))
+(d1array22(a,(_n7+0),_N5)<=d1array22(a,(_n6+((_n7+0)+1)),_N5))
+
+Axiomes Added
+
+d1array13(a,_x2,_N4(_n5),_n5) = d1array13(a,_x2,(_n4+1),_n5)
+d1array22(a,_x2,_N5) = d1array22(a,_x2,(_n5+1))
+d1array22(a,_x2,_N5) = d1array(a,_x2)
+d1array13(a,_x2,_N4(_n5),_n5) = d1array(a,_x2)
+s3((_n1+1),_n5) = ite((d1array22(a,(_n1+((_n5+0)+1)),_n5)<d1array22(a,s3(_n1,_n5),_n5)),(_n1+((_n5+0)+1)),s3(_n1,_n5))
+s3(0,_n5) = (_n5+0)
+(_N1(_n5)>=(-(((_n5+0)+1))+100000))
+(_n1<_N1(_n5)) -> ((_n1+((_n5+0)+1))<100000)
+(_N2(_n3,_n5)>=((_n5+0)-((_n3+0)+1)))
+(_n2<_N2(_n3,_n5)) -> ((_n2+((_n3+0)+1))<(_n5+0))
+y11((_n3+1),_n5) = (_N2(_n3,_n5)+((_n3+0)+1))
+y11(0,_n5) = y22(_n5)
+(_N3(_n5)>=((_n5+0)-0))
+(_n3<_N3(_n5)) -> ((_n3+0)<(_n5+0))
+(_N4(_n5)>=(-((_n5+0))+100000))
+(_n4<_N4(_n5)) -> ((_n4+(_n5+0))<100000)
+tmp22((_n5+1)) = ite((s3(_N1(_n5),_n5)!=(_n5+0)),d1array22(a,s3(_N1(_n5),_n5),_n5),tmp22(_n5))
+k22((_n5+1)) = (_N1(_n5)+((_n5+0)+1))
+d1array22(a,_x2,(_n5+1)) = d1array13(a,_x2,_N4(_n5),_n5)
+s22((_n5+1)) = s3(_N1(_n5),_n5)
+y22((_n5+1)) = y11(_N3(_n5),_n5)
+x22((_n5+1)) = (_N4(_n5)+(_n5+0))
+tmp22(0) = tmp
+k22(0) = k
+d1array22(a,_x2,0) = d1array(a,_x2)
+s22(0) = s
+y22(0) = y
+x22(0) = x
+(_N5>=(-(0)+100000))
+(_n5<_N5) -> ((_n5+0)<100000)
+(_N6(_n7)>=(-(((_n7+0)+1))+100000))
+(_n6<_N6(_n7)) -> ((_n6+((_n7+0)+1))<100000)
+y27((_n7+1)) = (_N6(_n7)+((_n7+0)+1))
+y27(0) = y22(_N5)
+(_N7>=(-(0)+100000))
+(_n7<_N7) -> ((_n7+0)<100000)
+Unknown

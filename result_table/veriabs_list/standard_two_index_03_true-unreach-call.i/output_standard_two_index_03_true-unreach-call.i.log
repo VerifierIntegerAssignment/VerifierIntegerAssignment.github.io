@@ -1,0 +1,48 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/standard_two_index_03_true-unreach-call.i/standard_two_index_03_true-unreach-call.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/standard_two_index_03_true-unreach-call.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf standard_two_index_03_true_unreach_call
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of standard_two_index_03_true_unreach_call
+YES_ARRAYABS
+Amenable to Array Abstraction
+Examining K-shrinkability of standard_two_index_03_true_unreach_call for K= 1
+** 0 of 1 failed (1 iteration)
+VERIFICATION SUCCESSFUL
+Verification successful
+exiting with 1
+Checking property of standard_two_index_03_true_unreach_call with K= 1
+** 0 of 2 failed (1 iteration)
+VERIFICATION SUCCESSFUL
+Verification successful
+exiting with 1
+OUTCOME standard_two_index_03_true_unreach_call 1 YES
+VeriAbs:LSH:VERIABS_VERIFICATION_SUCCESSFUL
+
+invariant data: 0
+Using /home/pritom/mainDev/veriabs/cpact/cpachecker17
+
+Total time taken before witness generation: 24
+
+CPAC Witness Generation Command:
+timeout --preserve-status -k 20s 30s scripts/cpa.sh -correctness-witnesses-k-induction -outputpath /home/pritom/mainDev/veriabs/witnessgendir -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call.c >/home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call/Logs/cpaLog.txt 2>&1
+CPA time taken: 30
+Error: Either /home/pritom/mainDev/veriabs/witnessgendir/correctness-witness.graphml or /home/pritom/mainDev/veriabs/invariant.xml doesn't exist. CPA Command: [timeout --preserve-status -k 20s 30s scripts/cpa.sh -correctness-witnesses-k-induction -outputpath /home/pritom/mainDev/veriabs/witnessgendir -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call.c >/home/pritom/ar_abs_temp/standard_two_index_03_true_unreach_call/Logs/cpaLog.txt 2>&1]
+
+witness test_d : /home/pritom/mainDev/veriabs/witness.graphml.

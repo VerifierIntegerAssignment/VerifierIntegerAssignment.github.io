@@ -1,0 +1,118 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/rangesum40_false-unreach-call.i/rangesum40_false-unreach-call.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/rangesum40_false-unreach-call.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf rangesum40_false_unreach_call
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of rangesum40_false_unreach_call
+
+NOT Amenable to Array Abstraction
+OUTCOME rangesum40_false_unreach_call -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 45
+witness_generation:  simplification took (ms) 12
+witness_generation:  total time taken(ms): 289
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 27
+witness_generation:  simplification took (ms) 4
+witness_generation:  total time taken(ms): 112
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/assertFlags.c /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/kind.c /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/rangesum40_false_unreach_call.c > /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/test.c
+NO_TIMEOUT for cbmc call: 2560 && timeout val 400 s.
+
+***[main.assertion.1] : FAILURE
+****
+
+#[main.assertion.1] # FAILURE#
+--1--
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 20
+witness_generation:  total time taken(ms): 161
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/assertFlags.c /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/kind.c /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/rangesum40_false_unreach_call.c > /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/test.c
+
+Running cbmc on unparsed file with induction: /home/pritom/ar_abs_temp/rangesum40_false_unreach_call/LAU/test.c
+Running verification check by cbmc: /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c
+Running with --z3 - 
+
+***[main.assertion.1] : SUCCESS
+[init_nondet.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[main.assertion.1] # SUCCESS#
+--0--
+
+Running with known bound: 41 /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c
+
+Running with --z3 - 
+
+***[main.assertion.1] : FAILURE
+****
+
+#[main.assertion.1] # FAILURE#
+--1--
+
+generateCPACFalseWitness: started
+invariant data: 1
+Using /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+generateCPACFalseWitness: Removing already existing witness output/violation-witness.graphml
+generateCPACFalseWitness: CPAC Witness Generation Command:
+timeout -k 10s 200 scripts/cpa.sh -noout -heap 10000M -predicateAnalysis -setprop cpa.composite.aggregateBasicBlocks=false -setprop cfa.simplifyCfa=false -setprop cfa.allowBranchSwapping=false -setprop cpa.predicate.ignoreIrrelevantVariables=false -setprop counterexample.export.assumptions.assumeLinearArithmetics=true -setprop counterexample.export.assumptions.includeConstantsForPointers=false -setprop counterexample.export.graphml=violation-witness.graphml -setprop counterexample.export.compressErrorWitness=false -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c >/home/pritom/ar_abs_temp/rangesum40_false_unreach_call/Logs/cpaLog.txt 2>&1
+generateCPACFalseWitness: witness generation time taken: 201 
+
+generateCPACFalseWitness: Error in CPA-Checker Violation Witness generation. [timeout -k 10s 200 scripts/cpa.sh -noout -heap 10000M -predicateAnalysis -setprop cpa.composite.aggregateBasicBlocks=false -setprop cfa.simplifyCfa=false -setprop cfa.allowBranchSwapping=false -setprop cpa.predicate.ignoreIrrelevantVariables=false -setprop counterexample.export.assumptions.assumeLinearArithmetics=true -setprop counterexample.export.assumptions.includeConstantsForPointers=false -setprop counterexample.export.graphml=violation-witness.graphml -setprop counterexample.export.compressErrorWitness=false -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c >/home/pritom/ar_abs_temp/rangesum40_false_unreach_call/Logs/cpaLog.txt 2>&1] 31744
+
+CBMC: Starting witness generation.
+Status:10
+CBMC:VeriAbs Known Bound:VERIABS_VERIFICATION_FAILED
+
+witness for /home/pritom/ar_abs_temp/rangesum40_false_unreach_call.c 3bc22eacddab290eba000ecad4885815ce9878ac
+
+Witness : /home/pritom/mainDev/veriabs/witness.graphml.

@@ -1,0 +1,8 @@
+
+Unhandled Exception:
+System.MissingFieldException: Field 'Microsoft.Boogie.ExecutionEngine.printer' not found.
+[ERROR] FATAL UNHANDLED EXCEPTION: System.MissingFieldException: Field 'Microsoft.Boogie.ExecutionEngine.printer' not found.
+
+Error invoking command:
+boogie /home/pritom/mainDev/smack-1.7.1-64/a-AJ8OQE.bpl /nologo /noinfer /doModSetAnalysis /timeLimit:890 /errorLimit:1 /loopUnroll:100 /proverOpt:OPTIMIZE_FOR_BV=true /z3opt:smt.relevancy=0 /z3opt:smt.bv.enable_int2bv=true /boolControlVC
+boogie returned non-zero.

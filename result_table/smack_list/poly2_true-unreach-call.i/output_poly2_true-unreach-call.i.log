@@ -1,0 +1,26 @@
+/home/pritom/mainDev/smack-1.7.1-64/poly2_true-unreach-call-eCxOfy.i:6:14: error: conflicting types for '__VERIFIER_nondet_int'
+extern short __VERIFIER_nondet_int(void);
+             ^
+/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include/smack.h:113:1: note: previous declaration is here
+NONDET_DECL(__VERIFIER_nondet,int);
+^
+/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include/smack.h:76:37: note: expanded from macro 'NONDET_DECL'
+#define NONDET_DECL(P, ty...) S(ty) U(P,U(ty)) ()
+                                    ^
+/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include/smack.h:74:40: note: expanded from macro 'U'
+#define U(...) TY(__VA_ARGS__, U4, U3, U2, U1)(__VA_ARGS__)
+                                       ^
+/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include/smack.h:71:36: note: expanded from macro 'TY'
+#define TY(_1, _2, _3, _4, A, ...) A
+                                   ^
+/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include/smack.h:68:17: note: expanded from macro 'U2'
+#define U2(a,b) a ## _ ## b
+                ^
+<scratch space>:152:1: note: expanded from here
+__VERIFIER_nondet_int
+^
+1 error generated.
+
+Error invoking command:
+clang -c -emit-llvm -O0 -g -gcolumn-info -I/home/pritom/mainDev/smack-1.7.1-64/smack/share/smack/include -m32 -DAVOID_NAME_CONFLICTS -DCUSTOM_VERIFIER_ASSERT -DNO_FORALL -DDISABLE_PTHREAD_ASSERTS -include smack.h -x c -DMEMORY_MODEL_NO_REUSE_IMPLS -o /home/pritom/mainDev/smack-1.7.1-64/poly2_true-unreach-call-eCxOfy-ArVRqn.bc /home/pritom/mainDev/smack-1.7.1-64/poly2_true-unreach-call-eCxOfy.i
+clang returned non-zero.

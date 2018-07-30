@@ -1,0 +1,225 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/sorting_selectionsort_true-unreach-call_ground.i/sorting_selectionsort_true-unreach-call_ground.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/sorting_selectionsort_true-unreach-call_ground.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf sorting_selectionsort_true_unreach_call_ground
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of sorting_selectionsort_true_unreach_call_ground
+
+NOT Amenable to Array Abstraction
+OUTCOME sorting_selectionsort_true_unreach_call_ground -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 35
+witness_generation:  simplification took (ms) 58
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 21
+witness_generation:  total time taken(ms): 565
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 8
+witness_generation:  simplification took (ms) 8
+witness_generation: simplification of assume expr time taken(ms) 11
+witness_generation:  simplification took (ms) 11
+witness_generation:  total time taken(ms): 378
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/assertFlags.c /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/kind.c /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/sorting_selectionsort_true_unreach_call_ground.c > /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/test.c
+NO_TIMEOUT for cbmc call: 35072 && timeout val 120 s.
+
+*******
+
+--1--
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 37
+witness_generation:  simplification took (ms) 76
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 4
+witness_generation:  total time taken(ms): 495
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/assertFlags.c /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/kind.c /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/sorting_selectionsort_true_unreach_call_ground.c > /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/test.c
+
+Running cbmc on unparsed file with induction: /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground/LAU/test.c
+Running verification check by cbmc: /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground.c
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Running with known bound: 100001 /home/pritom/ar_abs_temp/sorting_selectionsort_true_unreach_call_ground.c
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+Not summarizable!
+Not running on summarizer generated file.
+
+Running for lauf: 
+
+Lauf unwind count : 22
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 54
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 118
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 246
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 502
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 1014
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 2038
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 4086
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Lauf unwind count : 8182
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Hoist Assert...original file saved.
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 30
+witness_generation:  simplification took (ms) 20
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 5
+witness_generation:  total time taken(ms): 358
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete with assert hoisting.
+
+Verification check KI.
+
+VeriAbs:KIND:TOERR
+VERIABS_UNKNOWN

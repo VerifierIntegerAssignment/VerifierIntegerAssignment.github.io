@@ -1,0 +1,176 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/nr4_true-unreach-call.i/nr4_true-unreach-call.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/nr4_true-unreach-call.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/nr4_true_unreach_call.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/nr4_true_unreach_call.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf nr4_true_unreach_call
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/nr4_true_unreach_call.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of nr4_true_unreach_call
+
+NOT Amenable to Array Abstraction
+OUTCOME nr4_true_unreach_call -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 112
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 156
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/assertFlags.c /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/kind.c /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/nr4_true_unreach_call.c > /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/test.c
+NO_TIMEOUT for cbmc call: 2560 && timeout val 120 s.
+
+***[__VERIFIER_assert.assertion.1] : FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # FAILURE#
+--1--
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 161
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/assertFlags.c /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/kind.c /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/nr4_true_unreach_call.c > /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/test.c
+
+Running cbmc on unparsed file with induction: /home/pritom/ar_abs_temp/nr4_true_unreach_call/LAU/test.c
+Running verification check by cbmc: /home/pritom/ar_abs_temp/nr4_true_unreach_call.c
+Running with --z3 - 
+
+*******
+
+--1--
+
+Running with known bound: 6 /home/pritom/ar_abs_temp/nr4_true_unreach_call.c
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.1] unwinding assertion loop 1: FAILURE
+[main.unwind.2] unwinding assertion loop 2: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+Not summarizable!
+Not running on summarizer generated file.
+
+Running for OOM BS: /home/pritom/ar_abs_temp/nr4_true_unreach_call.c
+
+OOM BS value : 11
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+CBMC:VeriAbs OOM BS BOUND:TOERR
+
+OOM BS value : 5
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.1] unwinding assertion loop 1: FAILURE
+[main.unwind.2] unwinding assertion loop 2: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+OOM BS value : 8
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.1] unwinding assertion loop 1: FAILURE
+[main.unwind.2] unwinding assertion loop 2: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+OOM BS value : 9
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.1] unwinding assertion loop 1: FAILURE
+[main.unwind.2] unwinding assertion loop 2: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+OOM BS value : 10
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.1] unwinding assertion loop 1: FAILURE
+[main.unwind.2] unwinding assertion loop 2: FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+Hoist Assert...original file saved.
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 55
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete with assert hoisting.
+
+Verification check KI.

@@ -1,0 +1,45 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/skippedu_false-unreach-call.i/skippedu_false-unreach-call.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/skippedu_false-unreach-call.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/skippedu_false_unreach_call.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/skippedu_false_unreach_call.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf skippedu_false_unreach_call
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/skippedu_false_unreach_call.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of skippedu_false_unreach_call
+YES_ARRAYABS
+Amenable to Array Abstraction
+Examining K-shrinkability of skippedu_false_unreach_call for K= 1
+** 0 of 1 failed (1 iteration)
+VERIFICATION SUCCESSFUL
+Verification successful
+exiting with 1
+Checking property of skippedu_false_unreach_call with K= 1
+** 1 of 2 failed (2 iterations)
+VERIFICATION FAILED
+Verification failed
+exiting with 0
+OUTCOME skippedu_false_unreach_call 1 NO
+
+LSH time taken-unwind,651,5
+VeriAbs:LSH:VERIABS_VERIFICATION_FAILED
+
+generateCPACFalseWitness: not running as 49 + 200 + 651 >= 900
+CBMC: Starting witness generation.
+Status:10
+witness for /home/pritom/ar_abs_temp/skippedu_false_unreach_call.c 69a8cdfb90da21c880e2ea8c68ae8d9efb957756
+
+Witness : /home/pritom/mainDev/veriabs/witness.graphml.

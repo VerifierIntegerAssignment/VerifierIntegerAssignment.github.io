@@ -1,0 +1,65 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  int a[100000];
+  int e;
+  e = __VERIFIER_nondet_int();
+  int i;
+  i = 0;
+  while ((i < 100000) && (a[i] != e))
+  {
+    i = i + 1;
+  }
+
+  int x;
+  x = 0;
+  while (x < i)
+  {
+    _1_PROVE[x] = a[x] != e;
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:array e:int i:int _1_PROVE:array RET:int x:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+a1 = a
+
+2. Output equations:
+i1 = (_N1+0)
+x1 = (_N2+0)
+d1array1(_x1,_x2) = d1array3(_x1,_x2,_N2)
+e1 = __VERIFIER_nondet_int2
+main = 0
+
+3. Other axioms:
+(((_N1+0)>=100000) or (d1array(a,(_N1+0))==__VERIFIER_nondet_int2))
+(_n1<_N1) -> (((_n1+0)<100000) and (d1array(a,(_n1+0))!=__VERIFIER_nondet_int2))
+d1array3(_x1,_x2,(_n2+1)) = d1array3(_x1,_x2,_n2)
+d1array3(_x1,_x2,0) = d1array(_x1,_x2)
+(_N2>=((_N1+0)-0))
+(_n2<_N2) -> ((_n2+0)<(_N1+0))
+
+4. Assumption :
+
+5. Assertion :
+(d1array3(a,(_n2+0),_N2)!=__VERIFIER_nondet_int2)
+
+Axiomes Added
+
+d1array3(a,_x2,_N2) = d1array(a,_x2)
+d1array3(a,_x2,_N2) = d1array3(a,_x2,_N2)
+VIAP_STANDARD_OUTPUT_True

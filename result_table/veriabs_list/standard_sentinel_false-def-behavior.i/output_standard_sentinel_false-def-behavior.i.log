@@ -1,0 +1,76 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/standard_sentinel_false-def-behavior.i/standard_sentinel_false-def-behavior.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/standard_sentinel_false-def-behavior.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf standard_sentinel_false_def_behavior
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of standard_sentinel_false_def_behavior
+YES_ARRAYABS_UND
+Amenable to Array Abstraction
+Examining K-shrinkability of standard_sentinel_false_def_behavior for K= 1
+** 0 of 1 failed (1 iteration)
+VERIFICATION SUCCESSFUL
+Verification successful
+exiting with 1
+Checking property of standard_sentinel_false_def_behavior with K= 1
+** 1 of 2 failed (2 iterations)
+VERIFICATION FAILED
+Verification failed
+exiting with 0
+OUTCOME standard_sentinel_false_def_behavior 1 UND
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 139
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation:  total time taken(ms): 63
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/LAU/assertFlags.c /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/LAU/kind.c /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/LAU/standard_sentinel_false_def_behavior.c > /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/LAU/test.c
+NO_TIMEOUT for cbmc call: 0 && timeout val 400 s.
+
+VeriAbs no-induction:VERIABS_VERIFICATION_SUCCESSFUL
+
+invariant data: 0
+Using /home/pritom/mainDev/veriabs/cpact/cpachecker17
+
+Total time taken before witness generation: 51
+
+CPAC Witness Generation Command:
+timeout --preserve-status -k 20s 30s scripts/cpa.sh -correctness-witnesses-k-induction -outputpath /home/pritom/mainDev/veriabs/witnessgendir -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior.c >/home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/Logs/cpaLog.txt 2>&1
+CPA time taken: 30
+Error: Either /home/pritom/mainDev/veriabs/witnessgendir/correctness-witness.graphml or /home/pritom/mainDev/veriabs/invariant.xml doesn't exist. CPA Command: [timeout --preserve-status -k 20s 30s scripts/cpa.sh -correctness-witnesses-k-induction -outputpath /home/pritom/mainDev/veriabs/witnessgendir -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior.c >/home/pritom/ar_abs_temp/standard_sentinel_false_def_behavior/Logs/cpaLog.txt 2>&1]
+
+witness test_d : /home/pritom/mainDev/veriabs/witness.graphml.

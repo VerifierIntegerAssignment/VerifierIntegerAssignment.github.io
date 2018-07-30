@@ -1,0 +1,17 @@
+Ceagle 1.3 @ 53cfa89
+main found Z3 version 4.4.2
+main using property file /home/pritom/mainDev/ceagle-1.3/ReachSafety.prp
+main found property 1 [CHECK( init(main()), LTL(G ! call(__VERIFIER_error())) )]
+main verifying /home/pritom/mainDev/ceagle-1.3/ceagle_list/standard_copy3_true-unreach-call_ground.i/standard_copy3_true-unreach-call_ground.i
+main using context ...
+RunnerArraysLargeLoop running ...
+RunnerArraysLargeLoop narrowing the array size
+RunnerArraysLargeLoop clang else
+RunnerArraysLargeLoop clang to compile /home/pritom/mainDev/ceagle-1.3/ceagle_list/standard_copy3_true-unreach-call_ground.i/standard_copy3_true-unreach-call_ground.i.se.c
+RunnerArraysLargeLoop clang generated /home/pritom/mainDev/ceagle-1.3/ceagle_list/standard_copy3_true-unreach-call_ground.i/standard_copy3_true-unreach-call_ground.i.se
+RunnerArraysLargeLoop se else
+RunnerArraysLargeLoop se running /home/pritom/mainDev/ceagle-1.3/ceagle_list/standard_copy3_true-unreach-call_ground.i/standard_copy3_true-unreach-call_ground.i.se
+RunnerArraysLargeLoop se run result -1 errno No such file or directory
+RunnerArraysLargeLoop se finally 65280
+RunnerArraysLargeLoop has result of 0 FALSE
+FALSE

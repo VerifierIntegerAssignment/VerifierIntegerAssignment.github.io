@@ -1,0 +1,29 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/standard_copy5_false-unreach-call_ground.i/standard_copy5_false-unreach-call_ground.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/standard_copy5_false-unreach-call_ground.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/standard_copy5_false_unreach_call_ground.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/standard_copy5_false_unreach_call_ground.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf standard_copy5_false_unreach_call_ground
+ARP:PROGRAM UNDER SCOPE
+ARP:Program is UNSAF
+OUTCOME standard_copy5_false_unreach_call_ground -1 NO
+
+LSH time taken-unwind,689,5
+VeriAbs:LSH:VERIABS_VERIFICATION_FAILED
+
+generateCPACFalseWitness: not running as 11 + 200 + 689 >= 900
+CBMC: Starting witness generation.
+Status:124
+witness test_d : /home/pritom/mainDev/veriabs/witness.graphml.

@@ -1,0 +1,36 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/init-8-u.c/init-8-u.c
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/init-8-u.c/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/init_8_u_c.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/init_8_u_c.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf init_8_u_c
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/init_8_u_c.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of init_8_u_c
+
+NOT Amenable to Array Abstraction
+OUTCOME init_8_u_c -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 30
+witness_generation:  simplification took (ms) 27
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 8
+witness_generation:  total time taken(ms): 286
+
+Starting the loop abstraction unparser..
+
+

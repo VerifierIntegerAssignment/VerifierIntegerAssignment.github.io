@@ -1,0 +1,173 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/copy-partial-3-u.c/copy-partial-3-u.c
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/copy-partial-3-u.c/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/copy_partial_3_u_c.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/copy_partial_3_u_c.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf copy_partial_3_u_c
+ARP:PROGRAM OUT OF SCOPE
+/home/pritom/ar_abs_temp/copy_partial_3_u_c.c
+Starting LSH Array Abstraction..
+Examining ArrayAbstractability of copy_partial_3_u_c
+
+NOT Amenable to Array Abstraction
+OUTCOME copy_partial_3_u_c -1 NA
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 63
+witness_generation:  simplification took (ms) 23
+witness_generation: simplification of assume expr time taken(ms) 0
+witness_generation:  simplification took (ms) 6
+witness_generation:  total time taken(ms): 456
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 14
+witness_generation:  simplification took (ms) 11
+witness_generation: simplification of assume expr time taken(ms) 0
+witness_generation:  simplification took (ms) 78
+witness_generation:  total time taken(ms): 407
+
+Starting the loop abstraction unparser..
+
+
+
+Abstraction Without Induction and with output abstraction.
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/assertFlags.c /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/kind.c /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/copy_partial_3_u_c.c > /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/test.c
+
+Running cbmc on unparsed file without induction : /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/test.c
+NO_TIMEOUT for cbmc call: 2560 && timeout val 120 s.
+
+***[__VERIFIER_assert.assertion.1] : FAILURE
+****
+
+#[__VERIFIER_assert.assertion.1] # FAILURE#
+--1--
+
+***Parsing completed..
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 2
+witness_generation:  simplification took (ms) 11
+witness_generation: simplification of assume expr time taken(ms) 1
+witness_generation:  simplification took (ms) 33
+witness_generation:  total time taken(ms): 252
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete
+
+Gcc Preprocessing Command:
+gcc -m32 -E /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/assertFlags.c /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/kind.c /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/copy_partial_3_u_c.c > /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/test.c
+
+Running cbmc on unparsed file with induction: /home/pritom/ar_abs_temp/copy_partial_3_u_c/LAU/test.c
+Running verification check by cbmc: /home/pritom/ar_abs_temp/copy_partial_3_u_c.c
+Running with --z3 - 
+
+*******
+
+--1--
+
+Not summarizable!
+Not running on summarizer generated file.
+
+Running for OOM BS: /home/pritom/ar_abs_temp/copy_partial_3_u_c.c
+
+OOM BS value : 11
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+CBMC:VeriAbs OOM BS BOUND:TOERR
+
+OOM BS value : 5
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+[main.unwind.1] unwinding assertion loop 1: SUCCESS
+[main.unwind.2] unwinding assertion loop 2: SUCCESS
+[main.unwind.3] unwinding assertion loop 3: FAILURE
+[main.unwind.4] unwinding assertion loop 4: SUCCESS
+[main.unwind.5] unwinding assertion loop 5: SUCCESS
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+OOM BS value : 8
+
+Running with --z3 - 
+
+***[__VERIFIER_assert.assertion.1] : SUCCESS
+[main.unwind.0] unwinding assertion loop 0: FAILURE
+[main.unwind.1] unwinding assertion loop 1: SUCCESS
+[main.unwind.2] unwinding assertion loop 2: SUCCESS
+[main.unwind.3] unwinding assertion loop 3: FAILURE
+[main.unwind.4] unwinding assertion loop 4: SUCCESS
+[main.unwind.5] unwinding assertion loop 5: SUCCESS
+****
+
+#[__VERIFIER_assert.assertion.1] # SUCCESS#
+--0--
+
+CBMC:VeriAbs OOM BS BOUND:LOOP UNWINDING ASSERTION FAILURE
+
+OOM BS value : 9
+
+Running with --z3 - 
+
+*******
+
+--1--
+
+CBMC:VeriAbs OOM BS BOUND:TOERR
+
+Hoist Assert...original file saved.
+Started collecting loop information for abstraction...
+witness_generation:  started!
+witness_generation: simplification of assume expr time taken(ms) 2
+witness_generation:  simplification took (ms) 4
+witness_generation: simplification of assume expr time taken(ms) 0
+witness_generation:  simplification took (ms) 7
+witness_generation:  total time taken(ms): 188
+
+Starting the loop abstraction unparser..
+
+
+
+***Loop Abstraction Information extraction complete with assert hoisting.
+
+Verification check KI.
+
+VeriAbs:KIND:TOERR
+VERIABS_UNKNOWN

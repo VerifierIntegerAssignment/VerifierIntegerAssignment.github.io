@@ -1,0 +1,116 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE[1000000];
+  int i;
+  int n;
+  n = 100000;
+  int pos;
+  int element;
+  element = __VERIFIER_nondet_int();
+  int found;
+  found = 0;
+  int vectorx[n];
+  i = 0;
+  while ((i < n) && (found <= 0))
+  {
+    if (vectorx[i] == element)
+    {
+      found = 1;
+      pos = i;
+    }
+
+    i = i + 1;
+  }
+
+  if (found > 0)
+  {
+    i = pos;
+    while (i < (n - 1))
+    {
+      vectorx[i] = vectorx[i + 1];
+      i = i + 1;
+    }
+
+  }
+
+  if (found > 0)
+  {
+    int x;
+    x = 0;
+    while (x < pos)
+    {
+      _1_PROVE[x] = vectorx[x] != element;
+      x = x + 1;
+    }
+
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ vectorx:array i:int _1_PROVE:array pos:int RET:int element:int x:int found:int n:int}
+
+
+Output in normal notation:
+1. Frame axioms:
+vectorx1 = vectorx
+
+2. Output equations:
+i1 = ite((found4(_N1)>0),(_N2+pos4(_N1)),(_N1+0))
+d1array1(_x1,_x2) = ite((found4(_N1)>0),d1array10(_x1,_x2,_N3),ite((found4(_N1)>0),d1array6(_x1,_x2,_N2),d1array(_x1,_x2)))
+pos1 = pos4(_N1)
+main = 0
+element1 = __VERIFIER_nondet_int2
+found1 = found4(_N1)
+x1 = ite((found4(_N1)>0),(_N3+0),x)
+n1 = 100000
+
+3. Other axioms:
+found4((_n1+1)) = ite((d1array(vectorx,(_n1+0))==__VERIFIER_nondet_int2),1,found4(_n1))
+pos4((_n1+1)) = ite((d1array(vectorx,(_n1+0))==__VERIFIER_nondet_int2),(_n1+0),pos4(_n1))
+found4(0) = 0
+pos4(0) = pos
+(((_N1+0)>=100000) or (found4(_N1)>0))
+(_n1<_N1) -> (((_n1+0)<100000) and (found4(_n1)<=0))
+d1array6(_x1,_x2,(_n2+1)) = ite(((_x1=vectorx) and (_x2=(_n2+pos4(_N1)))),d1array6(vectorx,((_n2+pos4(_N1))+1),_n2),d1array6(_x1,_x2,_n2))
+d1array6(_x1,_x2,0) = d1array(_x1,_x2)
+(_N2>=((-(pos4(_N1))+100000)-1))
+(_n2<_N2) -> ((_n2+pos4(_N1))<(100000-1))
+d1array10(_x1,_x2,(_n3+1)) = d1array10(_x1,_x2,_n3)
+d1array10(_x1,_x2,0) = ite((found4(_N1)>0),d1array6(_x1,_x2,_N2),d1array(_x1,_x2))
+(_N3>=(pos4(_N1)-0))
+(_n3<_N3) -> ((_n3+0)<pos4(_N1))
+
+4. Assumption :
+
+5. Assertion :
+(found4(_N1)>0) -> (d1array10(vectorx,(_n3+0),_N3)!=__VERIFIER_nondet_int2)
+
+Axiomes Added
+
+d1array10(vectorx,(_n2+pos4(_N1)),_N3) = d1array(vectorx,((_n2+pos4(_N1))+1))
+d1array10(vectorx,(_n2+pos4(_N1)),_N3) = d1array10(vectorx,((_n2+pos4(_N1))+1),_N3)
+d1array6(vectorx,(_n2+pos4(_N1)),_N2) = d1array(vectorx,((_n2+pos4(_N1))+1))
+d1array6(vectorx,(_n2+pos4(_N1)),_N2) = d1array6(vectorx,((_n2+pos4(_N1))+1),_N2)
+found4((_n1+1)) = ite((d1array(vectorx,(_n1+0))==__VERIFIER_nondet_int2),1,found4(_n1))
+pos4((_n1+1)) = ite((d1array(vectorx,(_n1+0))==__VERIFIER_nondet_int2),(_n1+0),pos4(_n1))
+found4(0) = 0
+pos4(0) = pos
+(((_N1+0)>=100000) or (found4(_N1)>0))
+(_n1<_N1) -> (((_n1+0)<100000) and (found4(_n1)<=0))
+d1array6(vectorx,(_n2+pos4(_N1)),(_n2+1)) = ite((vectorx=vectorx),d1array6(vectorx,((_n2+pos4(_N1))+1),_n2),d1array6(vectorx,(_n2+pos4(_N1)),_n2))
+d1array6(vectorx,_x2,0) = d1array(vectorx,_x2)
+(_N2>=((-(pos4(_N1))+100000)-1))
+(_n2<_N2) -> ((_n2+pos4(_N1))<(100000-1))
+(_N3>=(pos4(_N1)-0))
+(_n3<_N3) -> ((_n3+0)<pos4(_N1))
+Unknown

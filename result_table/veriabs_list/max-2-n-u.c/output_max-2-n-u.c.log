@@ -1,0 +1,51 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/max-2-n-u.c/max-2-n-u.c
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/max-2-n-u.c/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/max_2_n_u_c.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/max_2_n_u_c.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Errors encountered...
+***Please refer to /home/pritom/ar_abs_temp/max_2_n_u_c/Logs/max_2_n_u_c_completeError.txt
+
+
+Printing logs
+
+Creating /home/pritom/ar_abs_temp/max_2_n_u_c/Input directory...
+
+Created File : /home/pritom/ar_abs_temp/max_2_n_u_c/Input/max_2_n_u_c.prj
+
+Creating /home/pritom/ar_abs_temp/max_2_n_u_c/IRs directory...
+
+Creating /home/pritom/ar_abs_temp/max_2_n_u_c/IRs/max_2_n_u_c directory...
+
+Creating /home/pritom/ar_abs_temp/max_2_n_u_c/LAI directory...
+
+Created File : /home/pritom/ar_abs_temp/max_2_n_u_c/LabtecPrefixHeader.h
+
+***Preparing IRs for each C file...
+
+
+***Preparing IRs for /home/pritom/ar_abs_temp/max_2_n_u_c.c...
+/home/pritom/mainDev/veriabs/bin/cppfe -I"" --edg-m --edg-w --edg--gcc --edg--c99 --edg--preinclude=/home/pritom/ar_abs_temp/max_2_n_u_c/LabtecPrefixHeader.h -O "/home/pritom/ar_abs_temp/max_2_n_u_c/IRs" "max_2_n_u_c.c" 2>> "/home/pritom/ar_abs_temp/max_2_n_u_c/Logs/LAI.err" 1>> "/home/pritom/ar_abs_temp/max_2_n_u_c/Logs/LAI.log"
+
+
+C++ Front End Version CPPFE_3.3.5_B4
+Running Front End on max_2_n_u_c.c.
+ERROR In frontend!!
+
+
+Printing errors
+"max_2_n_u_c.c", line 17: error: "m" has already been declared in the current
+          scope
+  	int m;
+  	    ^
+

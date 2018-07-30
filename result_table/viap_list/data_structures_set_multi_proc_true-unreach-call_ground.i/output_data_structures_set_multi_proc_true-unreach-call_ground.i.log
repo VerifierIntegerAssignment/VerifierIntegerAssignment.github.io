@@ -1,0 +1,241 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  set[size] = value;
+  RET = size + 1;
+}
+
+Function Name:
+insert
+Return Type:
+int
+Input Variables:
+{ set:int value:int size:int}
+Local Variables:
+{ RET:int}
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE[100000][100000];
+  int _2_PROVE[100000][100000];
+  int n;
+  n = 0;
+  int set[100000];
+  int x;
+  int y;
+  x = 0;
+  while (x < n)
+  {
+    y = x + 1;
+    while (y < n)
+    {
+      _1_PROVE[y][x] = set[x] != set[y];
+      y = y + 1;
+    }
+
+    x = x + 1;
+  }
+
+  int values[100000];
+  int v;
+  v = 0;
+  while (v < 100000)
+  {
+    if (elem_exists(set, n, values[v]) <= 0)
+    {
+      n = insert(set, n, values[v]);
+    }
+
+    v = v + 1;
+  }
+
+  x = 0;
+  while (x < n)
+  {
+    y = x + 1;
+    while (y < n)
+    {
+      _2_PROVE[y][x] = set[x] != set[y];
+      y = y + 1;
+    }
+
+    x = x + 1;
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ set:array _1_PROVE:array RET:int n:int values:array v:int y:int x:int _2_PROVE:array}
+Program Body
+{
+  int break_1_flag;
+  break_1_flag = 0;
+  int RET;
+  RET = 0;
+  int i;
+  i = 0;
+  while ((i < size) && (break_1_flag == 0))
+  {
+    break_1_flag = 0;
+    if (set[i] == value)
+    {
+      RET = 1;
+    }
+
+    if (set[i] != value)
+    {
+      i = i + 1;
+    }
+
+    if (set[i] == value)
+    {
+      break_1_flag = 1;
+    }
+
+  }
+
+  if (set[i] != value)
+  {
+    RET = 0;
+  }
+
+}
+
+Function Name:
+elem_exists
+Return Type:
+int
+Input Variables:
+{ set:int value:int size:int}
+Local Variables:
+{ i:int RET:int break_1_flag:int}
+
+Output in normal notation:
+1. Frame axioms:
+set1(set) = set
+value1(value) = value
+size1(size) = size
+
+2. Output equations:
+insert(size,value,set) = (size+1)
+
+3. Other axioms:
+
+4. Assumption :
+
+5. Assertion :
+
+
+
+Output in normal notation:
+1. Frame axioms:
+set1 = set
+d1array1(_x1,_x2) = d1array(_x1,_x2)
+values1 = values
+
+2. Output equations:
+main = 0
+n1 = n10(_N3)
+d2array1(_x1,_x2,_x3) = d2array15(_x1,_x2,_x3,_N5)
+v1 = (_N3+0)
+y1 = y15(_N5)
+x1 = (_N5+0)
+
+3. Other axioms:
+d2array4(_x1,_x2,_x3,(_n1+1),_n2) = d2array4(_x1,_x2,_x3,_n1,_n2)
+d2array4(_x1,_x2,_x3,0,_n2) = d2array7(_x1,_x2,_x3,_n2)
+(_N1(_n2)>=(0-((_n2+0)+1)))
+(_n1<_N1(_n2)) -> ((_n1+((_n2+0)+1))<0)
+y7((_n2+1)) = (_N1(_n2)+((_n2+0)+1))
+d2array7(_x1,_x2,_x3,(_n2+1)) = d2array4(_x1,_x2,_x3,_N1(_n2),_n2)
+y7(0) = y
+d2array7(_x1,_x2,_x3,0) = d2array(_x1,_x2,_x3)
+(_N2>=(0-0))
+(_n2<_N2) -> ((_n2+0)<0)
+n10((_n3+1)) = ite((elem_exists(set,n10(_n3),d1array(values,(_n3+0)))<=0),insert(set,n10(_n3),d1array(values,(_n3+0))),n10(_n3))
+n10(0) = 0
+(_N3>=(-(0)+100000))
+(_n3<_N3) -> ((_n3+0)<100000)
+d2array12(_x1,_x2,_x3,(_n4+1),_n5) = d2array12(_x1,_x2,_x3,_n4,_n5)
+d2array12(_x1,_x2,_x3,0,_n5) = d2array15(_x1,_x2,_x3,_n5)
+(_N4(_n5)>=(n10(_N3)-((_n5+0)+1)))
+(_n4<_N4(_n5)) -> ((_n4+((_n5+0)+1))<n10(_N3))
+y15((_n5+1)) = (_N4(_n5)+((_n5+0)+1))
+d2array15(_x1,_x2,_x3,(_n5+1)) = d2array12(_x1,_x2,_x3,_N4(_n5),_n5)
+y15(0) = y7(_N2)
+d2array15(_x1,_x2,_x3,0) = d2array7(_x1,_x2,_x3,_N2)
+(_N5>=(n10(_N3)-0))
+(_n5<_N5) -> ((_n5+0)<n10(_N3))
+
+4. Assumption :
+
+5. Assertion :
+(d1array(set,(_n2+0))!=d1array(set,(_n1+((_n2+0)+1))))
+(d1array(set,(_n5+0))!=d1array(set,(_n4+((_n5+0)+1))))
+
+Output in normal notation:
+1. Frame axioms:
+set1(set) = set
+value1(value) = value
+size1(size) = size
+
+2. Output equations:
+i1(set,value,size) = i30(_N6(size,set,value),set,value)
+break_1_flag1(set,value,size) = break_1_flag30(_N6(size,set,value),set,value)
+elem_exists(size,value,set) = ite((d1array(set,i30(_N6(size,set,value),set,value))!=value),0,RET30(_N6(size,set,value),set,value))
+
+3. Other axioms:
+i30((_n6+1),set,value) = ite((d1array(set,i30(_n6,set,value))!=value),(i30(_n6,set,value)+1),i30(_n6,set,value))
+RET30((_n6+1),set,value) = ite((d1array(set,i30(_n6,set,value))==value),1,RET30(_n6,set,value))
+break_1_flag30((_n6+1),set,value) = ite((d1array(set,ite((d1array(set,i30(_n6,set,value))!=value),(i30(_n6,set,value)+1),i30(_n6,set,value)))==value),1,0)
+i30(0,set,value) = 0
+RET30(0,set,value) = 0
+break_1_flag30(0,set,value) = 0
+((i30(_N6(size,set,value),set,value)>=size) or (break_1_flag30(_N6(size,s/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c: In function ‘main’:
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:107:24: error: ‘v’ undeclared (first use in this function)
+       printf("v:%d\n", v);
+                        ^
+/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:107:24: note: each undeclared identifier is reported only once for each function it appears in
+et,value),set,value)!=0))
+(_n6<_N6(size,set,value)) -> ((i30(_n6,set,value)<size) and (break_1_flag30(_n6,set,value)==0))
+
+4. Assumption :
+
+5. Assertion :
+
+Axiomes Added
+
+(_N1(_n2)>=(0-((_n2+0)+1)))
+(_n1<_N1(_n2)) -> ((_n1+((_n2+0)+1))<0)
+y7((_n2+1)) = (_N1(_n2)+((_n2+0)+1))
+y7(0) = y
+(_N2>=(0-0))
+(_n2<_N2) -> ((_n2+0)<0)
+elem_exists_i30((_n7+1),d1array(values,(_n3+0)),elem_exists_value) = ite((d1array(d1array(values,(_n3+0)),elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value))!=elem_exists_value),(elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value)+1),elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value))
+elem_exists_RET30((_n7+1),d1array(values,(_n3+0)),elem_exists_value) = ite((d1array(d1array(values,(_n3+0)),elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value))==elem_exists_value),1,elem_exists_RET30(_n7,d1array(values,(_n3+0)),elem_exists_value))
+elem_exists_break_1_flag30((_n7+1),d1array(values,(_n3+0)),elem_exists_value) = ite((d1array(d1array(values,(_n3+0)),ite((d1array(d1array(values,(_n3+0)),elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value))!=elem_exists_value),(elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value)+1),elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value)))==elem_exists_value),1,0)
+elem_exists_i30(0,d1array(values,(_n3+0)),elem_exists_value) = 0
+elem_exists_RET30(0,d1array(values,(_n3+0)),elem_exists_value) = 0
+elem_exists_break_1_flag30(0,d1array(values,(_n3+0)),elem_exists_value) = 0
+((elem_exists_i30(_N7(d1array(values,(_n3+0)),d1array(values,(_n3+0)),elem_exists_value),d1array(values,(_n3+0)),elem_exists_value)>=d1array(values,(_n3+0))) or (elem_exists_break_1_flag30(_N7(d1array(values,(_n3+0)),d1array(values,(_n3+0)),elem_exists_value),d1array(values,(_n3+0)),elem_exists_value)!=0))
+(_n7<_N7(d1array(values,(_n3+0)),d1array(values,(_n3+0)),elem_exists_value)) -> ((elem_exists_i30(_n7,d1array(values,(_n3+0)),elem_exists_value)<d1array(values,(_n3+0))) and (elem_exists_break_1_flag30(_n7,d1array(values,(_n3+0)),elem_exists_value)==0))
+n10((_n3+1)) = ite((ite((d1array(d1array(values,(_n3+0)),elem_exists_i30(_N7(d1array(values,(_n3+0)),d1array(values,(_n3+0)),n10(_n3)),d1array(values,(_n3+0)),n10(_n3)))!=n10(_n3)),0,elem_exists_RET30(_N7(d1array(values,(_n3+0)),d1array(values,(_n3+0)),n10(_n3)),d1array(values,(_n3+0)),n10(_n3)))<=0),(d1array(values,(_n3+0))+1),n10(_n3))
+n10(0) = 0
+(_N3>=(-(0)+100000))
+(_n3<_N3) -> ((_n3+0)<100000)
+(_N4(_n5)>=(n10(_N3)-((_n5+0)+1)))
+(_n4<_N4(_n5)) -> ((_n4+((_n5+0)+1))<n10(_N3))
+y15((_n5+1)) = (_N4(_n5)+((_n5+0)+1))
+y15(0) = y7(_N2)
+(_N5>=(n10(_N3)-0))
+(_n5<_N5) -> ((_n5+0)<n10(_N3))
+Unknown

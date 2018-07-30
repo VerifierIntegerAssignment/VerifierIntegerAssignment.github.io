@@ -1,0 +1,35 @@
+VeriAbs version 1.3.10
+VeriAbs root: /home/pritom/mainDev/veriabs
+scripts/veriabs: 44: [: unexpected operator
+cpac option: --cpact
+Running VeriAbs on /home/pritom/mainDev/veriabs/veriabs_list/standard_copy7_true-unreach-call_ground.i/standard_copy7_true-unreach-call_ground.i
+Home: /home/pritom
+cp: cannot stat '/home/pritom/mainDev/veriabs/veriabs_list/standard_copy7_true-unreach-call_ground.i/*.h': No such file or directory
+VeriAbs input C file(rw): /home/pritom/ar_abs_temp/standard_copy7_true_unreach_call_ground.c
+VeriAbs command: /home/pritom/mainDev/veriabs/scripts/veriabs.pl --svcomp17 --property-file /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp /home/pritom/ar_abs_temp/standard_copy7_true_unreach_call_ground.prj
+Working directory on running VeriAbs.pl : /home/pritom/mainDev/veriabs
+
+ CBMC version : 5.8
+
+CPAC Root: /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+***Parsing completed..
+
+Array Abstraction: /home/pritom/mainDev/veriabs/scripts/vrf standard_copy7_true_unreach_call_ground
+ARP:PROGRAM UNDER SCOPE
+ARP:Program is SAFE
+OUTCOME standard_copy7_true_unreach_call_ground -1 YES
+VeriAbs:LSH:VERIABS_VERIFICATION_SUCCESSFUL
+
+invariant data: 1
+Using /home/pritom/mainDev/veriabs/cpact/CPAchecker-1.6.1-unix
+
+Total time taken before witness generation: 6
+
+CPAC Witness Generation Command:
+timeout --preserve-status -k 20s 30s scripts/cpa.sh -correctness-witnesses-k-induction -outputpath /home/pritom/mainDev/veriabs/witnessgendir -spec /home/pritom/mainDev/veriabs/ReachSafety.prp /home/pritom/ar_abs_temp/standard_copy7_true_unreach_call_ground.c >/home/pritom/ar_abs_temp/standard_copy7_true_unreach_call_ground/Logs/cpaLog.txt 2>&1
+CPA time taken: 30
+witness_generation: Started adding invariants from /home/pritom/mainDev/veriabs/invariant.xml to /home/pritom/mainDev/veriabs/witnessgendir/correctness-witness.graphml
+
+Witness generation time taken: 1
+witness test_d : /home/pritom/mainDev/veriabs/witness.graphml.
