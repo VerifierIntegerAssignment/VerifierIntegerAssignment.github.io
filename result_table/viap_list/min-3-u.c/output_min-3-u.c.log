@@ -1,39 +1,24 @@
-/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c: In function ‘main’:
-/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:85:14: error: ‘m’ undeclared (first use in this function)
-   while (i < m)
-              ^
-/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:85:14: note: each undeclared identifier is reported only once for each function it appears in
-/home/pritom/mainDev/VIAP_ARRAY-master/viap/input_program.c:92:18: error: ‘p’ undeclared (first use in this function)
-       while (k < p)
-                  ^
+pritom@pritom-VirtualBox:~/Downloads/test/viap$ ./viap_tool.py --spec=ReachSafety.prp multidimensional/min-2-u.c
 Program Body
 {
-  int _1_PROVE[100000][100000][100000];
+  int _1_PROVE[100000][100000];
   int i;
   int j;
-  int k;
+  int m;
   int n;
-  int A[n][n][n];
+  int A[n][n];
   int min;
   i = 0;
   j = 0;
-  k = 0;
-  min = A[0][0][0];
-  while (i < m)
+  min = A[0][0];
+  while (i < n)
   {
     j = 0;
-    k = 0;
     while (j < n)
     {
-      k = 0;
-      while (k < p)
+      if (A[i][j] < min)
       {
-        if (A[i][j][k] < min)
-        {
-          min = A[i][j][k];
-        }
-
-        k = k + 1;
+        min = A[i][j];
       }
 
       j = j + 1;
@@ -44,20 +29,12 @@ Program Body
 
   i = 0;
   j = 0;
-  k = 0;
-  while (i < m)
+  while (i < n)
   {
     j = 0;
-    k = 0;
     while (j < n)
     {
-      k = 0;
-      while (k < p)
-      {
-        _1_PROVE[i][k][j] = A[i][j][k] >= min;
-        k = k + 1;
-      }
-
+      _1_PROVE[i][j] = A[i][j] >= min;
       j = j + 1;
     }
 
@@ -73,104 +50,53 @@ int
 Input Variables:
 {}
 Local Variables:
-{ A:array j:int min:int i:int k:int _1_PROVE:array n:int}
+{ A:array j:int min:int i:int _1_PROVE:array m:int n:int}
 
 
 Output in normal notation:
 1. Frame axioms:
 A1 = A
+m1 = m
 n1 = n
 
 2. Output equations:
-i1 = (_N6+0)
-k1 = k19(_N6)
-j1 = j19(_N6)
-d3array1(_x1,_x2,_x3,_x4) = d3array19(_x1,_x2,_x3,_x4,_N6)
-min1 = min10(_N3)
+i1 = (_N4+0)
+j1 = j11(_N4)
+d2array1(_x1,_x2,_x3) = d2array11(_x1,_x2,_x3,_N4)
+min1 = min6(_N2)
 
 3. Other axioms:
-min3((_n1+1),_n2,_n3) = ite((d3array(A,(_n3+0),(_n2+0),(_n1+0))<min3(_n1,_n2,_n3)),d3array(A,(_n3+0),(_n2+0),(_n1+0)),min3(_n1,_n2,_n3))
-min3(0,_n2,_n3) = min6(_n2,_n3)
-(_N1(_n2,_n3)>=(-(0)+p))
-(_n1<_N1(_n2,_n3)) -> ((_n1+0)<p)
-k6((_n2+1),_n3) = (_N1(_n2,_n3)+0)
-min6((_n2+1),_n3) = min3(_N1(_n2,_n3),_n2,_n3)
-k6(0,_n3) = 0
-min6(0,_n3) = min10(_n3)
-(_N2(_n3)>=(-(0)+n))
-(_n2<_N2(_n3)) -> ((_n2+0)<n)
-k10((_n3+1)) = k6(_N2(_n3),_n3)
-j10((_n3+1)) = (_N2(_n3)+0)
-min10((_n3+1)) = min6(_N2(_n3),_n3)
-k10(0) = 0
-j10(0) = 0
-min10(0) = d3array(A,0,0,0)
-(_N3>=(-(0)+m))
-(_n3<_N3) -> ((_n3+0)<m)
-d3array12(_x1,_x2,_x3,_x4,(_n4+1),_n5,_n6) = d3array12(_x1,_x2,_x3,_x4,_n4,_n5,_n6)
-d3array12(_x1,_x2,_x3,_x4,0,_n5,_n6) = d3array15(_x1,_x2,_x3,_x4,_n5,_n6)
-(_N4(_n5,_n6)>=(-(0)+p))
-(_n4<_N4(_n5,_n6)) -> ((_n4+0)<p)
-k15((_n5+1),_n6) = (_N4(_n5,_n6)+0)
-d3array15(_x1,_x2,_x3,_x4,(_n5+1),_n6) = d3array12(_x1,_x2,_x3,_x4,_N4(_n5,_n6),_n5,_n6)
-k15(0,_n6) = 0
-d3array15(_x1,_x2,_x3,_x4,0,_n6) = d3array19(_x1,_x2,_x3,_x4,_n6)
-(_N5(_n6)>=(-(0)+n))
-(_n5<_N5(_n6)) -> ((_n5+0)<n)
-k19((_n6+1)) = k15(_N5(_n6),_n6)
-j19((_n6+1)) = (_N5(_n6)+0)
-d3array19(_x1,_x2,_x3,_x4,(_n6+1)) = d3array15(_x1,_x2,_x3,_x4,_N5(_n6),_n6)
-k19(0) = 0
-j19(0) = 0
-d3array19(_x1,_x2,_x3,_x4,0) = d3array(_x1,_x2,_x3,_x4)
-(_N6>=(-(0)+m))
-(_n6<_N6) -> ((_n6+0)<m)
+min3((_n1+1),_n2) = ite((d2array(A,(_n2+0),(_n1+0))<min3(_n1,_n2)),d2array(A,(_n2+0),(_n1+0)),min3(_n1,_n2))
+min3(0,_n2) = min6(_n2)
+(_N1(_n2)>=(-(0)+n))
+(_n1<_N1(_n2)) -> ((_n1+0)<n)
+j6((_n2+1)) = (_N1(_n2)+0)
+min6((_n2+1)) = min3(_N1(_n2),_n2)
+j6(0) = 0
+min6(0) = d2array(A,0,0)
+(_N2>=(-(0)+n))
+(_n2<_N2) -> ((_n2+0)<n)
+d2array8(_x1,_x2,_x3,(_n3+1),_n4) = d2array8(_x1,_x2,_x3,_n3,_n4)
+d2array8(_x1,_x2,_x3,0,_n4) = d2array11(_x1,_x2,_x3,_n4)
+(_N3(_n4)>=(-(0)+n))
+(_n3<_N3(_n4)) -> ((_n3+0)<n)
+j11((_n4+1)) = (_N3(_n4)+0)
+d2array11(_x1,_x2,_x3,(_n4+1)) = d2array8(_x1,_x2,_x3,_N3(_n4),_n4)
+j11(0) = 0
+d2array11(_x1,_x2,_x3,0) = d2array(_x1,_x2,_x3)
+(_N4>=(-(0)+n))
+(_n4<_N4) -> ((_n4+0)<n)
 
 4. Assumption :
 
 5. Assertion :
-(d3array19(A,(_n6+0),(_n5+0),(_n4+0),_N6)>=min10(_N3))
+(d2array11(A,(_n4+0),(_n3+0),_N4)>=min6(_N2))
 
 Axiomes Added
 
-d3array12(A,_x2,_x3,_x4,_N4(_n5,_n6),_n5,_n6) = d3array12(A,_x2,_x3,_x4,_N4(_n5,_n6),_n5,_n6)
-d3array15(A,_x2,_x3,_x4,_N5(_n6),_n6) = d3array15(A,_x2,_x3,_x4,(_n5+1),_n6)
-d3array19(A,_x2,_x3,_x4,_N6) = d3array(A,_x2,_x3,_x4)
-d3array12(A,_x2,_x3,_x4,_N4(_n5,_n6),_n5,_n6) = d3array(A,_x2,_x3,_x4)
-d3array15(A,_x2,_x3,_x4,_N5(_n6),_n6) = d3array(A,_x2,_x3,_x4)
-d3array19(A,_x2,_x3,_x4,_N6) = d3array19(A,_x2,_x3,_x4,(_n6+1))
-min3((_n1+1),_n2,_n3) = ite((d3array(A,(_n3+0),(_n2+0),(_n1+0))<min3(_n1,_n2,_n3)),d3array(A,(_n3+0),(_n2+0),(_n1+0)),min3(_n1,_n2,_n3))
-min3(0,_n2,_n3) = min6(_n2,_n3)
-(_N1(_n2,_n3)>=(-(0)+p))
-(_n1<_N1(_n2,_n3)) -> ((_n1+0)<p)
-k6((_n2+1),_n3) = (_N1(_n2,_n3)+0)
-min6((_n2+1),_n3) = min3(_N1(_n2,_n3),_n2,_n3)
-k6(0,_n3) = 0
-min6(0,_n3) = min10(_n3)
-(_N2(_n3)>=(-(0)+n))
-(_n2<_N2(_n3)) -> ((_n2+0)<n)
-k10((_n3+1)) = k6(_N2(_n3),_n3)
-j10((_n3+1)) = (_N2(_n3)+0)
-min10((_n3+1)) = min6(_N2(_n3),_n3)
-k10(0) = 0
-j10(0) = 0
-min10(0) = d3array(A,0,0,0)
-(_N3>=(-(0)+m))
-(_n3<_N3) -> ((_n3+0)<m)
-(_N4(_n5,_n6)>=(-(0)+p))
-(_n4<_N4(_n5,_n6)) -> ((_n4+0)<p)
-k15((_n5+1),_n6) = (_N4(_n5,_n6)+0)
-d3array15(A,_x2,_x3,_x4,(_n5+1),_n6) = d3array15(A,_x2,_x3,_x4,_N4(_n5,_n6),_n5)
-k15(0,_n6) = 0
-d3array15(A,_x2,_x3,_x4,0,_n6) = d3array19(A,_x2,_x3,_x4,_n6)
-(_N5(_n6)>=(-(0)+n))
-(_n5<_N5(_n6)) -> ((_n5+0)<n)
-k19((_n6+1)) = k15(_N5(_n6),_n6)
-j19((_n6+1)) = (_N5(_n6)+0)
-d3array19(A,_x2,_x3,_x4,(_n6+1)) = d3array15(A,_x2,_x3,_x4,_N5(_n6),_n6)
-k19(0) = 0
-j19(0) = 0
-d3array19(A,_x2,_x3,_x4,0) = d3array(A,_x2,_x3,_x4)
-(_N6>=(-(0)+m))
-(_n6<_N6) -> ((_n6+0)<m)
-Unknown
+d2array11(A,_x2,_x3,_N4) = d2array(A,_x2,_x3)
+d2array11(A,_x2,_x3,_N4) = d2array11(A,_x2,_x3,(_n4+1))
+d2array8(A,_x2,_x3,_N3(_n4),_n4) = d2array8(A,_x2,_x3,_N3(_n4),_n4)
+d2array8(A,_x2,_x3,_N3(_n4),_n4) = d2array(A,_x2,_x3)
+
+VIAP_STANDARD_OUTPUT_True
